@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A modern, high-precision Drum Machine built for FreeCodeCamp certification challenge.">
+  <title>Build a Drum Machine | FreeCodeCamp</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- User Story #1: Outer container with id="drum-machine" -->
+    <main id="drum-machine">
+      <!-- Hardware Header -->
+      <header class="machine-header">
+        <div class="brand-wrapper">
+          <span class="brand-logo">RHYTHM-X</span>
+          <span class="brand-model">MPC-808 Pro</span>
+        </div>
+      </header>
+
+      <div class="machine-inner">
+        <!-- 3x3 Drum Pads Grid -->
+        <section class="pads-section" aria-label="Drum Pads">
+          <div class="pads-grid">
+            <!-- User Story #3, #4: 9 clickable drum pad elements in Q, W, E, A, S, D, Z, X, C order -->
+            <button class="drum-pad" id="heater-1" data-key="Q" type="button" aria-label="Trigger Q - Heater 1">
+              Q
+              <audio class="clip" id="Q" src="https://cdn.freecodecamp.org/testable-projects-fcc/audio/Heater-1.mp3"></audio>
+            </button>
+
+            <button class="drum-pad" id="heater-2" data-key="W" type="button" aria-label="Trigger W - Heater 2">
+              W
+              <audio class="clip" id="W" src="https://cdn.freecodecamp.org/testable-projects-fcc/audio/Heater-2.mp3"></audio>
+            </button>
+
+            <button class="drum-pad" id="heater-3" data-key="E" type="button" aria-label="Trigger E - Heater 3">
+              E
+              <audio class="clip" id="E" src="https://cdn.freecodecamp.org/testable-projects-fcc/audio/Heater-3.mp3"></audio>
+            </button>
+
+            <button class="drum-pad" id="heater-4" data-key="A" type="button" aria-label="Trigger A - Heater 4">
+              A
+              <audio class="clip" id="A" src="https://cdn.freecodecamp.org/testable-projects-fcc/audio/Heater-4_1.mp3"></audio>
+            </button>
+
+            <button class="drum-pad" id="clap" data-key="S" type="button" aria-label="Trigger S - Clap">
+              S
+              <audio class="clip" id="S" src="https://cdn.freecodecamp.org/testable-projects-fcc/audio/Heater-6.mp3"></audio>
+            </button>
+
+            <button class="drum-pad" id="open-hh" data-key="D" type="button" aria-label="Trigger D - Open HH">
+              D
+              <audio class="clip" id="D" src="https://cdn.freecodecamp.org/testable-projects-fcc/audio/Dsc_Oh.mp3"></audio>
+            </button>
+
+            <button class="drum-pad" id="kick-n-hat" data-key="Z" type="button" aria-label="Trigger Z - Kick n Hat">
+              Z
+              <audio class="clip" id="Z" src="https://cdn.freecodecamp.org/testable-projects-fcc/audio/Kick_n_Hat.mp3"></audio>
+            </button>
+
+            <button class="drum-pad" id="kick" data-key="X" type="button" aria-label="Trigger X - Kick">
+              X
+              <audio class="clip" id="X" src="https://cdn.freecodecamp.org/testable-projects-fcc/audio/RP4_KICK_1.mp3"></audio>
+            </button>
+
+            <button class="drum-pad" id="closed-hh" data-key="C" type="button" aria-label="Trigger C - Closed HH">
+              C
+              <audio class="clip" id="C" src="https://cdn.freecodecamp.org/testable-projects-fcc/audio/Cev_H2.mp3"></audio>
+            </button>
+          </div>
+        </section>
+
+        <!-- Right Side: Control & Display Panel -->
+        <aside class="controls-section" aria-label="Control Panel">
+          <!-- User Story #2, #7: Element with id="display" inside #drum-machine -->
+          <div class="display-unit">
+            <span class="display-label">LCD Display</span>
+            <div id="display">READY</div>
+          </div>
+
+          <div class="control-group">
+            <div class="switch-wrapper">
+              <span class="control-label">Power</span>
+              <label class="toggle-switch">
+                <input type="checkbox" id="power-toggle" checked aria-label="Toggle Power">
+                <span class="slider-switch"></span>
+              </label>
+            </div>
+          </div>
+
+          <div class="control-group">
+            <div class="switch-wrapper">
+              <span class="control-label">Bank</span>
+              <label class="toggle-switch">
+                <input type="checkbox" id="bank-toggle" aria-label="Toggle Sound Bank">
+                <span class="slider-switch bank-switch"></span>
+              </label>
+            </div>
+          </div>
+
+          <div class="control-group">
+            <label for="volume-slider" class="control-label">Volume</label>
+            <input type="range" id="volume-slider" class="volume-range" min="0" max="1" step="0.01" value="0.7" aria-label="Adjust Master Volume">
+          </div>
+
+          <p class="shortcuts-hint">
+            Press keys <strong>Q, W, E, A, S, D, Z, X, C</strong> or click pads.
+          </p>
+        </aside>
+      </div>
+    </main>
+  </div>
+
+  <!-- FreeCodeCamp Test Suite Script -->
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+  <!-- Application Logic -->
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
